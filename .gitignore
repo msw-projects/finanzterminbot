@@ -1,0 +1,13 @@
+# OSX #
+.DS_Store
+
+# Byte-compiled / optimized / DLL files #
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Misc #
+*.log
+bot.db
+env/
+.env
