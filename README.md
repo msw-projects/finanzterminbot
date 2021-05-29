@@ -4,14 +4,16 @@ Antwortet auf Befehle im Subreddit mit wichtigen Unternehmensterminen
 
 ---
 
+![Image of bot response](assets/bot-screenshot.png)
+
 ## Bot Commands
 
-Der Bot kann in einem Reddit-Kommentar über den Befehl `!termin <STOCK>` getriggert werden.
+Der Bot kann in einem Reddit-Kommentar über den Befehl `!termine <STOCK>` getriggert werden.
 
 Unterstützt werden:
-- WKN: `!termine BAYN01`
+- WKN: `!termine BAY001`
 - ISIN: `!termine DE0006459324`
-- Symbol: `!termine AAPL` (nur für amerikanischen Aktien, deutsche Symbole funktionieren nicht zuverlässig)
+- Symbol: `!termine AAPL` oder `!termine $AAPL` (nur für amerikanischen Aktien, deutsche Symbole funktionieren nicht zuverlässig)
 
 [!] Die Datenquelle ist nocht nicht perfekt. Für LuS haben wir bspw. keine Daten.
 

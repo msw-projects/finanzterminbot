@@ -114,7 +114,8 @@ class CompanyEventsBot(object):
         for e in events:
             event_rows.append([e['type'], e['info'], e['date']])
 
-        body = "# {} Termine\n\n*WKN: {} | ISIN: {}*\n\n".format(company_data['name'], company_data['wkn'], company_data['isin'])
+        body = "# {} Termine\n\n".format(company_data['name'])
+        body += "*WKN: {} | ISIN: {} | Symbol: {}*\n\n".format(company_data['wkn'], company_data['isin'], company_data.get('symbol') if company_data.get('symbol') else '-')
         body += self.make_markdown_table(event_columns, event_rows)
         return body
 
@@ -178,7 +179,7 @@ class CompanyEventsBot(object):
         if len(matches) > 0:
             # we found bot commands
             if self.already_responded(comment.id):
-                log.debug("Already responed to comment {}".format(comment.id))
+                log.debug("Already responded to comment {}".format(comment.id))
                 return
             
             log.debug("New comment {} requesting events for {}".format(comment.id, matches))
