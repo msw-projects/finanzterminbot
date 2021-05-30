@@ -8,7 +8,7 @@ Antwortet auf Befehle im Subreddit mit wichtigen Unternehmensterminen
 
 ## Bot Commands
 
-Der Bot kann in einem Reddit-Kommentar über den Befehl `!termine <STOCK>` getriggert werden.
+Der Bot kann in einem Reddit-Kommentar über den Befehl `!termine <STOCK>` getriggert werden (`!termin <STOCK>` ist auch möglich).
 
 Unterstützt werden:
 - WKN: `!termine BAY001`

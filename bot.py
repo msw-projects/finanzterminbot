@@ -173,7 +173,7 @@ class CompanyEventsBot(object):
 
     def check_comment(self, comment):
         """Checks PRAW comment for bot trigger command and responds to comment if triggered."""
-        command_regex = r"\!termine \$?(\w{1,6}|[A-Za-z]{2}\d{10})(?:\s|$)"
+        command_regex = r"\!termine? \$?(\w{1,6}|[A-Za-z]{2}\d{10})(?:\s|$)"
         matches = set(re.findall(command_regex, comment.body, re.MULTILINE | re.IGNORECASE))
 
         if len(matches) > 0:
@@ -213,7 +213,8 @@ class CompanyEventsBot(object):
             else:
                 response_text = "**Ich konnte leider keine Termine für deine Anfrage finden :(**"
             response_text += "\n\nIch bin ein MSW Community Bot | Du findest meinen Code auf [https://github.com/msw-projects](https://github.com/msw-projects)"
-            
+            response_text += "\nRufe mich mit `!termine` und WKN, ISIN oder Symbol (z.B. `!termine 508810` oder `!termine AAPL`)"
+
             if self.args.dry_run:
                 # don't reply on dry run
                 log.debug("Dry Run - did not reply")
