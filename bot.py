@@ -213,7 +213,7 @@ class CompanyEventsBot(object):
             else:
                 response_text = "**Ich konnte leider keine Termine für deine Anfrage finden :(**"
             response_text += "\n\nIch bin ein MSW Community Bot | Du findest meinen Code auf [https://github.com/msw-projects](https://github.com/msw-projects)"
-            response_text += "\nRufe mich mit `!termine` und WKN, ISIN oder Symbol (z.B. `!termine 508810` oder `!termine AAPL`)"
+            response_text += "\n\nRufe mich mit `!termine` und WKN, ISIN oder Symbol (z.B. `!termine 508810` oder `!termine AAPL`)"
 
             if self.args.dry_run:
                 # don't reply on dry run
